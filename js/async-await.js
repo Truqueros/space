@@ -7,7 +7,7 @@ const btn = document.querySelector('button');
 async function getPeopleInSpace(url) {
   const peopleResponse = await fetch(url);
   const peopleJSON = await peopleResponse.json();
-console.log(astrosUrl); //Esta line la agrege para ver json
+//console.log(astrosUrl); //Esta line la agrege para ver json
   const profiles = peopleJSON.people.map( async person => {
     const craft = person.craft;
     const profileResponse = await fetch(wikiUrl + person.name);
